@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Post from '../components/Post';
+import { Link } from 'react-router-dom'; 
 
 class Posts extends React.Component{
     constructor(props){
@@ -40,11 +41,13 @@ class Posts extends React.Component{
     }
 
     renderPosts(){
-        var getColor = this.generateColor();
+        
        
         const posts_render_array =  this.props.posts.map( (post) => (
-        <Post goPostDetail={this.goPostDetail} post={post} key={post.id} color={getColor()}/> ))
-       
+            
+        <Post goPostDetail={this.goPostDetail} post={post} key={post.id} />
+       ))
+
         return posts_render_array
     }
 
