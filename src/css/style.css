@@ -7,4 +7,48 @@ html {
   font-size: 62.5%; }
 
 body {
-  background-color: blue; }
+  font-family: 'Raleway'; }
+
+.login-container {
+  background-image: linear-gradient(to right bottom, rgba(187, 152, 173, 0.8), rgba(121, 152, 219, 0.5)), url(../img/main-background.jpg);
+  background-size: cover;
+  position: relative;
+  width: 100vw;
+  height: 100vh; }
+
+.login__card {
+  border-radius: 10px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  width: 40rem;
+  height: 20rem;
+  transition-property: all;
+  transition-duration: 0.4s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .login__card:hover {
+    transform: translate(-49.2%, -50.3%);
+    box-shadow: 8px 8px 18px rgba(0, 0, 0, 0.5); }
+
+.login__title {
+  font-weight: 200;
+  widows: 200px;
+  margin-top: 10px;
+  color: #4a65ae;
+  font-size: 3.5rem !important; }
+
+.login__sologran {
+  font-size: 1.8em;
+  font-weight: 400;
+  margin-top: 17px;
+  width: 70%;
+  padding-bottom: 28px;
+  border-bottom-color: #30417B;
+  border-bottom-width: 1.2px;
+  border-bottom-style: solid; }
+
+.login-btn {
+  margin-top: 20px;
+  padding: 4px; }
