@@ -10,7 +10,7 @@ class App extends Component {
       <div className="App">
       <Router>
         <Switch>
-          <Route exact path = '/' render = { () => (<Login />)} />
+          <Route exact path = '/' render = {() => (<Login />)} />
           <Route path = '/posts' render = {() => (<Posts />)} />
         </Switch>
         </Router>
