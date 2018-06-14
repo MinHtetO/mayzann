@@ -48,8 +48,8 @@ body {
   border-radius: 10px;
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
   background-color: white;
-  width: 40rem;
-  height: 20rem;
+  width: 55rem;
+  height: 30rem;
   transition-property: all;
   transition-duration: 0.2s; }
   .login__card:hover {
@@ -61,21 +61,21 @@ body {
   widows: 200px;
   margin-top: 10px;
   color: #4a65ae;
-  font-size: 3.5rem !important; }
+  font-size: 4.8rem !important; }
 
 .login__sologran {
-  font-size: 1.8em;
+  font-size: 2.3em;
   font-weight: 400;
-  margin-top: 17px;
+  margin-top: 35px;
   width: 70%;
-  padding-bottom: 24px;
+  padding-bottom: 35px;
   border-bottom-color: #30417B;
   border-bottom-width: 1.2px;
   border-bottom-style: solid; }
 
 .login-btn {
-  margin-top: 20px;
-  padding: 4px; }
+  margin-top: 30px;
+  padding: 15px; }
 
 .post {
   margin-top: 5px;
