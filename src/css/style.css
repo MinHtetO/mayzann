@@ -79,7 +79,7 @@ body {
 
 .post {
   margin-top: 5px;
-  height: 6rem;
+  height: 8rem;
   cursor: pointer;
   box-shadow: 0.5px 0.5px 7px rgba(0, 0, 0, 0.5);
   transition: all 0.3s; }
@@ -91,25 +91,25 @@ body {
     padding-top: 6px;
     position: relative;
     width: 25%;
-    height: 6rem;
+    height: 8rem;
     background-color: #7998DB;
     float: left; }
   .post-user__image {
-    width: 2.8rem;
-    height: 2.8rem;
+    width: 3.4rem;
+    height: 3.4rem;
     border-radius: 50%; }
   .post-user__name {
     width: 100%;
-    margin-top: .3rem;
-    font-size: 1rem;
+    margin-top: .8rem;
+    font-size: 1.2rem;
     color: white; }
   .post-title {
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #30417B; }
   .post-title__container {
     padding: 6px 6px;
-    height: 6rem;
+    height: 8rem;
     width: 75%;
     float: left; }
   .post:not(:last-child) {
