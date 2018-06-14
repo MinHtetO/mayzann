@@ -1,14 +1,55 @@
 .post{
+    background-color: $color-steel-blue;
     margin-top: 5px;
-   &__user-image{
-       width: 3rem;
-       height: 3rem;
-       border-radius: 50%;
-   } 
+    height: 6rem;
+    cursor: pointer;
+    box-shadow: .5px .5px 7px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+
+    &:hover{
+        box-shadow: 2.5px 2.5px 10px rgba(0, 0, 0, 0.5);
+        transform: scale(1.05,1.05);
+        transform: translate(1px,-1px);
+    }
+    
+    &-user__container{
+        padding-top: 6px;
+        position: relative;
+        width: 25%;
+        height: 6rem;
+        background-color: $color-med-purple;
+        float: left;
+    }
+
+
+    &-user__image{
+        width: 2.8rem;
+        height: 2.8rem;
+        border-radius: 50%;
+     } 
+
+     &-user__name{
+         width: 100%;
+         margin-top: .3rem;
+         font-size: 1rem;
+         color: white;
+     }
+
+    &-title{
+        font-weight: 400;
+        font-size: 1.1rem;
+        color: white;
+    }
+
+    &-title__container{
+        padding: 6px 6px;
+        height: 6rem;
+        width: 75%;
+        float: left;
+    }
+
     &:not(:last-child){
     padding-bottom: 18px;
-    border-bottom-color: rgba($color-med-purple,0.5);
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
   }
+  @include clearfix;
 }
