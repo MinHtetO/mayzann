@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Post from '../components/Post';
 import { Link } from 'react-router-dom'; 
+import Nav from '../components/Nav'
 
 class Posts extends React.Component{
     constructor(props){
@@ -54,12 +55,15 @@ class Posts extends React.Component{
     render(){
         
      return (
+    <React.Fragment>
+        <Nav/>
     <div className="postsPage">
     <div className="postsContainer">
     {this.renderPosts()}
     </div>
         
-     </div>    
+     </div> 
+     </React.Fragment>   
     );
     }
     }
