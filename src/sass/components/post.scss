@@ -1,5 +1,4 @@
 .post{
-    background-color: $color-steel-blue;
     margin-top: 5px;
     height: 6rem;
     cursor: pointer;
@@ -37,8 +36,8 @@
 
     &-title{
         font-weight: 400;
-        font-size: 1.1rem;
-        color: white;
+        font-size: 1.2rem;
+        color: $color-dark-blue;
     }
 
     &-title__container{
