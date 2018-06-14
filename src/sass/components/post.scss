@@ -1,0 +1,14 @@
+.post{
+    margin-top: 5px;
+   &__user-image{
+       width: 3rem;
+       height: 3rem;
+       border-radius: 50%;
+   } 
+    &:not(:last-child){
+    padding-bottom: 18px;
+    border-bottom-color: rgba($color-med-purple,0.5);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+}

@@ -1,29 +1,23 @@
 .login{
     &-container {
-        background-image: linear-gradient(
-            to right bottom,
-            rgba($color-rosy-brown, 0.8),
-            rgba($color-med-purple, 0.5)),
-        url(../img/main-background.jpg);
-        background-size: cover;
-        position: relative;
+       
         
         @include reactPage;
     }
 
     &__card{
-        
+        @include absCenter;
         border-radius: 10px;
         box-shadow: 2px 2px 20px rgba(0,0,0,0.5);
         background-color: white;
         width: 40rem;
         height: 20rem;
         transition-property: all;
-        transition-duration: 0.4s;
-        @include absCenter;
+        transition-duration: 0.2s;
+        
 
         &:hover{
-            transform: translate(-49.2%,-50.3%);
+            transform: translate(-49.8%,-50.3%);
             box-shadow: 8px 8px 18px rgba(0,0,0,0.5);
         }
         
@@ -42,7 +36,7 @@
         font-weight: 400;
         margin-top: 17px;
         width: 70%;
-        padding-bottom: 28px;
+        padding-bottom: 24px;
         border-bottom-color: $color-dark-blue;
         border-bottom-width: 1.2px;
         border-bottom-style: solid;

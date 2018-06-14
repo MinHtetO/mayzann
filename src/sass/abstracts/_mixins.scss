@@ -15,5 +15,12 @@
 
 @mixin reactPage {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-rosy-brown, 0.8),
+        rgba($color-med-purple, 0.5)),
+    url(../img/main-background.jpg);
+    background-size: cover;
+    position: relative;
 }
