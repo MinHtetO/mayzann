@@ -20,43 +20,43 @@ export default function(state = [], action) {
      {
       id: '3',
       title: 'Post2',
-      content: 'post 2 content',
+      content: 'post 3 content',
       user:'Sandi' 
      },
      {
       id: '4',
       title: 'Post2',
-      content: 'post 2 content',
+      content: 'post 4 content',
       user:'Sandi' 
      },
      {
       id: '5',
       title: 'Post2',
-      content: 'post 2 content',
+      content: 'post 5 content',
       user:'Sandi' 
      },
      {
       id: '6',
       title: 'Post2',
-      content: 'post 2 content',
+      content: 'post 6 content',
       user:'Sandi' 
      },
      {
       id: '7',
       title: 'Post2',
-      content: 'post 2 content',
+      content: 'post 7 content',
       user:'Sandi' 
      },
      {
       id: '8',
       title: 'Post2',
-      content: 'post 2 content',
+      content: 'post 8 content',
       user:'Sandi' 
      },
      {
       id: '9',
       title: 'Post2',
-      content: 'post 2 content',
+      content: 'post 9 content',
       user:'Sandi' 
      }
 

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import Nav from '../components/Nav'
 
 class Login extends React.Component{
     constructor(props){
@@ -8,6 +8,8 @@ class Login extends React.Component{
     }
     render(){
      return (
+         <React.Fragment>
+         <Nav/>
         <div className="login-container">
         <center>
         <div className="login__card">
@@ -19,6 +21,7 @@ class Login extends React.Component{
         </div>
         </center>
         </div>
+        </React.Fragment>
         );
     }
     }
