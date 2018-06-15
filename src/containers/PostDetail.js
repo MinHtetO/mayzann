@@ -11,11 +11,26 @@ class PostDetail extends React.Component{
     }
     render(){
      return (
-        <div>
-
+        <div> 
+           {console.log(this.props.match.params.id)}
         </div>
         );
     }
     }
+
+// const PostDetail = (props) => {
+//     return (
+//       <div>
+//         {/* <AddTodo />
+//         <VisibleTodoList filter={params.filter || 'SHOW_ALL'} />
+//         <Footer /> */}
+//         {/* Detail {params.id} */}
+//         {
+//             console.log(props.params)
+//         }
+//       </div>
+//     )
+//   }
     
-export default connect(null,null)(PostDetail);
+// export default connect(null,null)(PostDetail);
+export default PostDetail
