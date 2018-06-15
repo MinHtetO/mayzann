@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import ReduxPromise from "redux-promise";
 import PostDetail from "./containers/PostDetail";
+import UploadPost from './containers/UploadPost';
 
 const store = createStore(
     rootReducer
@@ -21,8 +22,9 @@ class App extends Component {
       <Router>
         <Switch>
           <Route exact path = '/' render = {() => (<Login />)} />
-          <Route exact path = "/posts/:id" render = {() => (<PostDetail/>)}/>
+          <Route exact path = "/posts/:id" render = {(props) => (<PostDetail {...props}/>)}/>
           <Route path = '/posts' render = {() => (<Posts />)} />
+          <Route path = '/upload' render= {() => <UploadPost />} />
         </Switch>
         </Router>
         </Provider>
