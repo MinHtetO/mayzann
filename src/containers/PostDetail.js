@@ -13,9 +13,10 @@ class PostDetail extends React.Component{
      
     }
     render(){
-        //console.log(this.props.match.params.id);
+        console.log(this.props.match.params.id);
      return (
-         <React.Fragment>
+
+    <React.Fragment>
          <Nav/>
          <div className="container">
         <div className="post-detail">
@@ -32,11 +33,27 @@ class PostDetail extends React.Component{
         </div>
         </div>
 
+
         </div>
         </React.Fragment>
         );
     }
     }
+
+// const PostDetail = (props) => {
+//     return (
+//       <div>
+//         {/* <AddTodo />
+//         <VisibleTodoList filter={params.filter || 'SHOW_ALL'} />
+//         <Footer /> */}
+//         {/* Detail {params.id} */}
+//         {
+//             console.log(props.params)
+//         }
+//       </div>
+//     )
+//   }
     
 // export default connect(null,null)(PostDetail);
 export default PostDetail;
+
