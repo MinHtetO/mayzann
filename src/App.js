@@ -17,11 +17,11 @@ class App extends Component {
     return (
       <div className="App">
       <Provider store={store}>
-      
+
       <Router>
         <Switch>
           <Route exact path = '/' render = {() => (<Login />)} />
-          <Route exact path = "/posts/:id" render = {() => (<PostDetail/>)}/>
+          <Route exact path = "/posts/:id" render ={(props)=> (<PostDetail {...props}/>)}/>
           <Route path = '/posts' render = {() => (<Posts />)} />
         </Switch>
         </Router>
@@ -33,3 +33,4 @@ class App extends Component {
 }
 
 export default App;
+
