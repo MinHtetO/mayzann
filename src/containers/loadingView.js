@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 
-const loadingView = ()=>{
+ const LoadingView = ()=>{
     return (
         <div>
         ...Loading ..
@@ -9,4 +9,4 @@ const loadingView = ()=>{
     )
 }
 
-export default loadingView;
+export default LoadingView;
