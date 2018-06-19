@@ -9,7 +9,7 @@ class Login extends React.Component{
     render(){
      return (
          <React.Fragment>
-         <Nav/>
+         {/* <Nav/> */}
         <div className="login-container">
         <center>
         <div className="login__card">
