@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Login from './containers/login';
+import Login from './containers/Login';
 import Posts from './containers/Posts';
 import {BrowserRouter as Router , Route, Switch} from 'react-router-dom';
 import rootReducer from "./reducers/index";

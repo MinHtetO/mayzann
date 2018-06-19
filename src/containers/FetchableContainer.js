@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import loadingView from './loadingView.js';
-import errorView from './errorView.js';
-import noDataView from './noDataView.js';
-import noConnectionView from './noConnectionView.js';
+import LoadingView from './LoadingView';
+import ErrorView from './ErrorView';
+import NoDataView from './NoDataView';
+import NoConnectionView from './NoConnectionView';
 
 //redux imports
 import {connect} from 'react-redux';
@@ -11,11 +11,21 @@ import {bindActionCreators} from 'redux';
 import { Link } from 'react-router';
 
 
-const fetchableContainer = (json) => (BaseComponent) =>
-
-    class FetchableContainer extends React.Component{
+const fetchableContainer = (json) => (BaseComponent) =>{
+    
+    let LoadingFetchView = json.LoadingView || LoadingView;
+    let fetchUrl = json.url || "https://jsonplaceholder.typicode.com/posts/";
+    let ErrorFetchView = json.ErrorView || ErrorView;
+    let NoConnectionFetchView = json.NoConnectionView || NoConnectionView;
+    let NoDataFetchView = json.NoDataView || NoDataView;
+    
+class FetchableContainer extends React.Component{
 
         constructor(props){
+
+            console.log("inside constructure");
+            console.log(LoadingView);
+
         super(props);  
         this.state = {
         fetchData: null,
@@ -24,17 +34,13 @@ const fetchableContainer = (json) => (BaseComponent) =>
         interntConnection: navigator.onLine?true:false,
         };
 
-        this.url = json.url || "";
-        this.loadingView = json.loadingView || loadingView;
-        this.errorView = json.errorView || errorView;
-        this.noConnectionView = json.noConnectionView || noConnectionView;
-        this.noDataView = json.noDataView || noDataView;
-
+     
+        
     }
 
     componentDidMount(){
         this.setState({loading: true});
-        axios.get(this.url,{
+        axios.get(fetchUrl,{
             headers: { 
                 'Access-Control-Allow-Origin' : '*',
                 'Access-Control-Allow-Methods' : 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
@@ -53,21 +59,23 @@ const fetchableContainer = (json) => (BaseComponent) =>
     render(){
 
         if(!this.state.interntConnection){
-            return <this.noConnectionView/>; 
+            return <NoConnectionFetchView/>; 
         }
 
         if(this.state.loading){
-            return <this.loadingView/>;
+            return <LoadingFetchView/>;
         }
 
         if(this.state.fetchError){
-            return <this.errorView/>;
+            return <ErrorFetchView/>;
         }
 
         return (
         <BaseComponent {...this.props}{...this.state}/>
         );
     }
+}
+return FetchableContainer;
 }
 
 export default fetchableContainer;
