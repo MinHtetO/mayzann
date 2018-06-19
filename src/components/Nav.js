@@ -15,9 +15,9 @@ export default class Nav extends React.Component{
         <div>
 
         <div className="main-nav">
-        <div className="main-nav__item">Home</div>
-        <div className="main-nav__item">Ask Question</div>   
-        <div className="main-nav__item">Log Out</div>
+        <Link to="" style={{textDecoration: 'none'}}><div className="main-nav__item">Home</div></Link>
+        <Link to="/upload" style={{textDecoration: 'none'}}><div className="main-nav__item">Ask Question</div></Link>
+        <Link to="" style={{textDecoration: 'none'}}><div className="main-nav__item">Log Out</div></Link>
         </div>
             </div>
         );
