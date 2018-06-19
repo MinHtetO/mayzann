@@ -12,6 +12,11 @@ class PostDetail extends React.Component{
      
      
     }
+    
+    componentDidMount(){
+
+    }
+
     render(){
         //console.log(this.props.match.params.id);
      return (

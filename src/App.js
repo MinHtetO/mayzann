@@ -7,6 +7,8 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import ReduxPromise from "redux-promise";
 import PostDetail from "./containers/PostDetail";
+import TestComponent from "./containers/TestComponent";
+import fetchableContainer from "./containers/FetchableContainer";
 
 const store = createStore(
     rootReducer
@@ -17,12 +19,11 @@ class App extends Component {
     return (
       <div className="App">
       <Provider store={store}>
-
-      <Router>
+        <Router>
         <Switch>
-          <Route exact path = '/' render = {() => (<Login />)} />
+          <Route exact path = '/' render = {() => (<Login/>)} />
           <Route exact path = "/posts/:id" render ={(props)=> (<PostDetail {...props}/>)}/>
-          <Route path = '/posts' render = {() => (<Posts />)} />
+          <Route path = '/posts' render = {() => (<Posts/>)} />
         </Switch>
         </Router>
         </Provider>
