@@ -15,14 +15,15 @@ import fetchableContainer from "./containers/FetchableContainer";
 //   );
 var FetchTest = fetchableContainer({
     url:"https://jsonplaceholder.typicode.com/posts",
-    loadingView: <div>..Custom Loading..</div>,
-    noConnectionView: <div>.. Custom no connection view .. </div>,
-    errorView: <div>Custom Error View</div>
+    // loadingView: <div>..Custom Loading..</div>,
+    // noConnectionView: <div>.. Custom no connection view .. </div>,
+    // errorView: <div>Custom Error View</div>
 })(TestComponent);
 
 
 ReactDOM.render(
-    <FetchTest/>
+    // <FetchTest/>
+    <App/>
     ,document.getElementById('root'));
 
 
