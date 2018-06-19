@@ -18,11 +18,13 @@ class App extends Component {
     return (
       <div className="App">
       <Provider store={store}>
-      
+
       <Router>
         <Switch>
           <Route exact path = '/' render = {() => (<Login />)} />
-          <Route exact path = "/posts/:id" render = {(props) => (<PostDetail {...props}/>)}/>
+ 
+          <Route exact path = "/posts/:id" render ={(props)=> (<PostDetail {...props}/>)}/>
+
           <Route path = '/posts' render = {() => (<Posts />)} />
           <Route path = '/upload' render= {() => <UploadPost />} />
         </Switch>
@@ -35,3 +37,4 @@ class App extends Component {
 }
 
 export default App;
+
