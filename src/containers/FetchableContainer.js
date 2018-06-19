@@ -22,10 +22,8 @@ const fetchableContainer = (json) => (BaseComponent) =>{
 class FetchableContainer extends React.Component{
 
         constructor(props){
-
             console.log("inside constructure");
             console.log(LoadingView);
-
         super(props);  
         this.state = {
         fetchData: null,
@@ -33,11 +31,8 @@ class FetchableContainer extends React.Component{
         fetchError: null,
         interntConnection: navigator.onLine?true:false,
         };
-
-     
-        
     }
-
+    
     componentDidMount(){
         this.setState({loading: true});
         axios.get(fetchUrl,{
