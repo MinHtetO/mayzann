@@ -22,8 +22,9 @@ class PostDetail extends React.Component{
      return (
 
     <React.Fragment>
-         <Nav/>
+        
          <div className="container">
+         <Nav />
         <div className="post-detail">
   
             <div className="post-detail__gp">

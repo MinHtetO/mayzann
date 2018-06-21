@@ -32,9 +32,10 @@ class UploadPost extends React.Component{
     render(){
         return(
             <React.Fragment>
-                <Nav />
+                
 
             <div className="upload__container">
+            <Nav />
        <div className="upload__card">
 
         <form onSubmit={this.onSubmit} className= "upload__form">
