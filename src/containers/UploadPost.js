@@ -33,43 +33,30 @@ class UploadPost extends React.Component{
         return(
             <React.Fragment>
                 <Nav />
-               <div className="upload-container">
-       
-        <div className="upload__card">
-        <form onSubmit={this.onSubmit} class= "upload__form">
-          <div className="upload__form-label">
-           
-             <label > Title</label>
+
+            <div className="upload__container">
+       <div className="upload__card">
+
+        <form onSubmit={this.onSubmit} className= "upload__form">
+            
+            <div className="upload__label">Title</div>
             <input 
-            className="upload__form-textInputField"
+            className="upload__input upload__input-title"
               type="text"
-              name="title"
               placeholder="Your Question Title"
               onChange={this.handleChangeTitle}
               value={this.state.title}
             />
-            
-            
-          </div>
-          
-          {/* <div>
-            <label>Body: </label>
-            </div> */}
-            
-            <div className="upload__form-label">
-            <center>
-            <label > Contt</label>
-                <textarea className="upload__form-textInputArea"
-              name="body"
+
+              <div className="upload__label">Description</div>
+
+           <textarea className="upload__input upload__input-description"
               onChange={this.handleChangeContent}
               value={this.state.body}
               placeholder="Your Question Content"
             />
-           </center>
-            </div>
-          
-          <br />
-         <center> <button class="upload__form-btn" type="submit">Submit</button></center>
+
+         <div class="upload__submit-btn">Submit</div>
         </form>
         </div>
         
