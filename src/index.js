@@ -5,7 +5,7 @@ import './css/style.css';
 import App from "./App";
 import TestComponent from "./containers/TestComponent";
 import fetchableContainer from "./containers/FetchableContainer";
-
+import 'antd/dist/antd.css';
 // import rootReducer from "./reducers/index";
 
 // const store = createStore(

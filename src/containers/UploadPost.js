@@ -2,18 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {} from '../action/index';
 import { connect } from 'react-redux';
-import Nav from '../components/Nav'
+import Nav from '../components/Nav';
+import { Modal, Button } from 'antd';
+import axios from 'axios';
 
 class UploadPost extends React.Component{
     constructor(props){
         super(props);
         this.state = {
             title: '',
-            content : ''
+            content : '',
+            loading: false,
+            visible: false,
         }
         this.handleChangeContent = this.handleChangeContent.bind(this);
         this.handleChangeTitle = this.handleChangeTitle.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
+        this.handleOk = this.handleOk.bind(this);
+        this.handleCancel = this.handleCancel.bind(this);
     }
 
     handleChangeTitle(event) {
@@ -24,21 +30,43 @@ class UploadPost extends React.Component{
         this.setState({content: event.target.value});
     }
     onSubmit(event){
-        // event.preventDefault();
-        alert('An essay was submitted: ' + this.state.title);
-        
+        event.preventDefault();
+        console.log("onSubmit");
+        this.setState({
+            visible: true,
+          });
         
     }
+    handleOk = () => {
+        // this.setState({ loading: true });
+        // setTimeout(() => {
+        //   this.setState({ loading: false, visible: false });
+        // }, 3000);
+        const post = {
+            title : this.state.title,
+            content: this.state.content
+        }
+        axios.post(`https://jsonplaceholder.typicode.com/users`, { post })
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      });
+      this.setState({visible:false});
+    }
+      handleCancel = () => {
+        this.setState({ visible: false });
+      }
     render(){
+
+        const load = this.state.loading;
+        const visiblity = this.state.visible;
         return(
-            <React.Fragment>
-                
-
-            <div className="upload__container">
+        <React.Fragment>
+          <div className="upload__container">
             <Nav />
-       <div className="upload__card">
+            <div className="upload__card">
 
-        <form onSubmit={this.onSubmit} className= "upload__form">
+            <form className= "upload__form">
             
             <div className="upload__label">Title</div>
             <input 
@@ -57,7 +85,22 @@ class UploadPost extends React.Component{
               placeholder="Your Question Content"
             />
 
-         <div class="upload__submit-btn">Submit</div>
+         <div className="upload__submit-btn" onClick={this.onSubmit}>Submit</div>
+         <Modal
+          visible={visiblity}
+          title="Upload Question"
+          onOk={this.handleOk}
+          onCancel={this.handleCancel}
+          footer={[
+            <Button key="back" onClick={this.handleCancel}>Return</Button>,
+            <Button key="submit" type="primary" loading={load} onClick={this.handleOk}>
+              Submit
+            </Button>,
+          ]}
+        >
+          <div style={{fontSize: 24}}>{this.state.title}</div>
+          <div>{this.state.content}</div>
+        </Modal>
         </form>
         </div>
         
