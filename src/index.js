@@ -20,7 +20,8 @@ var FetchTest = fetchableContainer({
 })(TestComponent);
 
 ReactDOM.render(
-    <FetchTest/>
+    // <FetchTest/>
+    <App/>
     ,document.getElementById('root'));
 
 

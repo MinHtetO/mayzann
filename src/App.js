@@ -9,6 +9,7 @@ import ReduxPromise from "redux-promise";
 import PostDetail from "./containers/PostDetail";
 import TestComponent from "./containers/TestComponent";
 import fetchableContainer from "./containers/FetchableContainer";
+import UploadPost from './containers/UploadPost';
 
 const store = createStore(
     rootReducer
@@ -21,9 +22,10 @@ class App extends Component {
       <Provider store={store}>
         <Router>
         <Switch>
-          <Route exact path = '/' render = {() => (<Login/>)} />
+          <Route exact path = "/" render = {() => (<Login/>)} />
           <Route exact path = "/posts/:id" render ={(props)=> (<PostDetail {...props}/>)}/>
-          <Route path = '/posts' render = {() => (<Posts/>)} />
+          <Route path = "/posts" render = {() => (<Posts/>)} />
+          <Route path = "/upload" render = {() => (<UploadPost/>)} />
         </Switch>
         </Router>
         </Provider>
