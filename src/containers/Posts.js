@@ -48,22 +48,21 @@ class Posts extends React.Component{
             
         <Post goPostDetail={this.goPostDetail} post={post} key={post.id} />
        ))
-
-        return posts_render_array
+       
+return posts_render_array
     }
 
     render(){
-        
-     return (
+    return (
     <React.Fragment>
-        <Nav/>
+    <Nav />
     <div className="postsPage">
     <div className="postsContainer">
     {this.renderPosts()}
     </div>
         
-     </div> 
-     </React.Fragment>   
+    </div> 
+    </React.Fragment>   
     );
     }
     }
