@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {} from '../action/index';
 import { connect } from 'react-redux';
 import Nav from '../components/Nav';
 import { Modal, Button } from 'antd';
 import axios from 'axios';
-
+import {store} from '../App';
+import { uploadPost} from '../actions/index';
 class UploadPost extends React.Component{
     constructor(props){
         super(props);
@@ -42,20 +42,24 @@ class UploadPost extends React.Component{
         // setTimeout(() => {
         //   this.setState({ loading: false, visible: false });
         // }, 3000);
-        const post = {
-            title : this.state.title,
-            content: this.state.content
-        }
+        
         axios.post(`https://jsonplaceholder.typicode.com/users`, { post })
       .then(res => {
         console.log(res);
         console.log(res.data);
       });
       this.setState({visible:false});
+      
+      const post = {
+        title : this.state.title,
+        content: this.state.content
+        }
+        this.props.onUpload(uploadPost(post));
     }
       handleCancel = () => {
         this.setState({ visible: false });
       }
+       
     render(){
 
         const load = this.state.loading;
@@ -92,9 +96,9 @@ class UploadPost extends React.Component{
           onOk={this.handleOk}
           onCancel={this.handleCancel}
           footer={[
-            <Button key="back" onClick={this.handleCancel}>Return</Button>,
+            <Button key="back" onClick={this.handleCancel}>Cancel</Button>,
             <Button key="submit" type="primary" loading={load} onClick={this.handleOk}>
-              Submit
+              Upload
             </Button>,
           ]}
         >
@@ -112,5 +116,6 @@ class UploadPost extends React.Component{
         );
     }
 }
+const mapDispatchToProps = {};
 
-export default connect(null)(UploadPost);
+export default UploadPost;

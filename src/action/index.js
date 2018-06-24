@@ -1,5 +1,5 @@
 let nextPost = 0
-export const uploadPost = text => ({
+export const addPost = text => ({
   type: 'UPLOAD_POST',
   id: nextPost++,
   text

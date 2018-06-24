@@ -33,9 +33,7 @@ class FetchableContainer extends React.Component{
         fetchError: null,
         interntConnection: navigator.onLine?true:false,
         };
-
-     
-        
+ 
     }
 
     componentDidMount(){

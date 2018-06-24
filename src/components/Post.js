@@ -12,7 +12,7 @@ export default function(props){
        <center><div className="post-user__name">Min Htet Oo</div></center>
         </div>
         <div className={"post-title__container"}>
-    <div className="post-title">Why we need to have enough sleep??</div>
+    <div className="post-title">{props.post.title}</div>
     </div>
         </div>
         </Link>
