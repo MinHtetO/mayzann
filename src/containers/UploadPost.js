@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {} from '../action/index';
 import { connect } from 'react-redux';
 import Nav from '../components/Nav'
 
@@ -62,10 +61,7 @@ class UploadPost extends React.Component{
         </div>
         
         </div>
-        
-        
-      
-            </React.Fragment>
+        </React.Fragment>
         );
     }
 }
