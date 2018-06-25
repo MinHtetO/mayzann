@@ -1,80 +1,3 @@
-// export default function(state = [], action) {
-   
-// //   switch (action.type) {
-// //     case 'FETCH_POSTS':
-// //     return [action.payload.data, ...state];
-// //   }
-//    var posts = [
-//     {
-//       id: '1',
-//       title: 'Post1',
-//       content: 'post 1 content',
-//       user:'Min Htet Oo' 
-//      },
-//      {
-//       id: '2',
-//       title: 'Post2',
-//       content: 'post 2 content',
-//       user:'Sandi' 
-//      },
-//      {
-//       id: '3',
-//       title: 'Post2',
-//       content: 'post 3 content',
-//       user:'Sandi' 
-//      },
-//      {
-//       id: '4',
-//       title: 'Post2',
-//       content: 'post 4 content',
-//       user:'Sandi' 
-//      },
-//      {
-//       id: '5',
-//       title: 'Post2',
-//       content: 'post 5 content',
-//       user:'Sandi' 
-//      },
-//      {
-//       id: '6',
-//       title: 'Post2',
-//       content: 'post 6 content',
-//       user:'Sandi' 
-//      },
-//      {
-//       id: '7',
-//       title: 'Post2',
-//       content: 'post 7 content',
-//       user:'Sandi' 
-//      },
-//      {
-//       id: '8',
-//       title: 'Post2',
-//       content: 'post 8 content',
-//       user:'Sandi' 
-//      },
-//      {
-//       id: '9',
-//       title: 'Post2',
-//       content: 'post 9 content',
-//       user:'Sandi' 
-//      }
-
-//    ]
-    
- 
-//   return posts;
-// }
-import {
-  fetch_all_posts,
-  fetch_post,
-  delete_post,
-  edit_post,
-  upload_post
-} from '../actions/action_types';
-import { updatePost } from '../action';
-import { stat } from 'fs';
-import { strictEqual } from 'assert';
 const initialState = [
   {
           id: 1,
@@ -131,6 +54,7 @@ const initialState = [
           user:'Sandi' 
          }
 ]
+
 const posts = (state = initialState, action) => {
   switch (action.type) {
     case upload_post:

@@ -7,12 +7,4 @@ const rootReducer = combineReducers({
 });
 
 
-function gg(){
-    return   {
-        id: '123',
-        tite: 'Post2',
-        content: 'post 2 content',
-        user:'Sandi' 
-       };
-}
 export default rootReducer;
