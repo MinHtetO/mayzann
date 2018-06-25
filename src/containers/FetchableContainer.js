@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import LoadingView from './LoadingView';
-import ErrorView from './ErrorView';
-import NoDataView from './NoDataView';
-import NoConnectionView from './NoConnectionView';
+import LoadingView from './fetchableViews/loadingView';
+import ErrorView from './fetchableViews/errorView';
+import NoDataView from './fetchableViews/noDataView';
+import NoConnectionView from './fetchableViews/noConnectionView';
 
 //redux imports
 import {connect} from 'react-redux';
@@ -22,8 +22,10 @@ const fetchableContainer = (json) => (BaseComponent) =>{
 class FetchableContainer extends React.Component{
 
         constructor(props){
+
             console.log("inside constructure");
             console.log(LoadingView);
+
         super(props);  
         this.state = {
         fetchData: null,
@@ -31,8 +33,9 @@ class FetchableContainer extends React.Component{
         fetchError: null,
         interntConnection: navigator.onLine?true:false,
         };
+ 
     }
-    
+
     componentDidMount(){
         this.setState({loading: true});
         axios.get(fetchUrl,{
