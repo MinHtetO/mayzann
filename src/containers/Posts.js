@@ -2,16 +2,20 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Post from '../components/Post';
 import { Link } from 'react-router-dom'; 
-import Nav from '../components/Nav'
+import Nav from '../components/Nav';
+import posts from '../data/posts';
 
 class Posts extends React.Component{
+
     constructor(props){
-     super(props);  
-     this.goPostDetail = this.goPostDetail.bind(this);
-     console.log(this.props);
+        super(props);  
+        this.goPostDetail = this.goPostDetail.bind(this);
+        console.log(this.props);
+        console.log(this.props.match.params);
     }
 
     generateColor(){
+
             let color1 = {
                 user: 'color-med-purple',
                 title: 'color-dark-gray'
@@ -42,14 +46,13 @@ class Posts extends React.Component{
     }
 
     renderPosts(){
-        
-       
-        const posts_render_array =  this.props.posts.map( (post) => (
-            
-        <Post goPostDetail={this.goPostDetail} post={post} key={post.id} />
+
+        const posts_render_array =  posts.map( (post) => (
+        <Post goPostDetail={this.goPostDetail
+        } post={post} key={post.id} />
        ))
-       
-return posts_render_array
+
+    return posts_render_array
     }
 
     render(){
@@ -65,10 +68,6 @@ return posts_render_array
     </React.Fragment>   
     );
     }
-    }
-    
-    function mapStateToProps(state) {
-        return { posts:state.posts };
-    }
-      
-    export default connect(mapStateToProps)(Posts);
+}
+
+export default Posts;

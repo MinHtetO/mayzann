@@ -4,7 +4,7 @@ import React, {Component} from 'react';
  const LoadingView = ()=>{
     return (
         <div>
-        ...Loading ..
+        <h1>...Loading ..</h1>
         </div>    
     )
 }

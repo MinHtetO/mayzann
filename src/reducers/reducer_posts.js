@@ -57,7 +57,7 @@ const initialState = [
 
 const posts = (state = initialState, action) => {
   switch (action.type) {
-    case upload_post:
+    case 'upload_post':
       return [
         ...state,
         action.payload
@@ -80,7 +80,7 @@ const posts = (state = initialState, action) => {
         // return state.filter(post=> post.id === action.payload.id);
         return action.payload.id;
 
-      case edit_post:
+      case 'edit_post':
       return state.map(oldOne =>
         (oldOne.id === action.id)
           ? [...oldOne, {title: action.title, text: action.text}]
